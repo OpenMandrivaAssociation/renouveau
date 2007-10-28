@@ -1,13 +1,13 @@
 
 %define version	0
 %define cvsver	20071028
-%define rel	1
+%define rel	2
 %define name	renouveau
 
 Name:		%name
 Version:	%version
 Release:	%mkrel 0.%cvsver.%rel
-Summary:	A tool to help developers of nouveau (a free driver for nvidia video cards)
+Summary:	A tool to help developers of nouveau
 Group:		Development/X11
 URL:		http://nouveau.freedesktop.org/
 # CVS snapshot
@@ -19,6 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	libxvmc-devel
 BuildRequires:	SDL-devel
 BuildRequires:	mesagl-devel
+BuildRequires:	libxml2-devel
 ExclusiveArch:	%ix86 x86_64
 
 %description
@@ -28,7 +29,8 @@ card registers while the nvidia proprietary video drivers are in
 use. This is used to do clean room reverse engineering (this is not
 in violation with nvidia driver license).
 
-Usage instructions are in README.install.urpmi.
+Read this page if you want to submit a renouveau dump:
+http://nouveau.freedesktop.org/wiki/REnouveauDumps
 
 %prep
 %setup -q -n %{name}-%{cvsver}
@@ -36,15 +38,8 @@ Usage instructions are in README.install.urpmi.
 perl -pi -e 's,lXvMCNVIDIA,lXvMCW,' Makefile
 
 cat > README.install.urpmi <<EOF
-Instructions:
-Make a writable directory and cd into it. Make sure your screensaver
-will not start in the next few minutes. Then fire up renouveau and
-wait. A window should appear where renouveau does its OpenGL tests.
-Do not move your mouse over that window nor move that window. Make
-sure no other window overlaps with the renouveau window. When
-renouveau quits the directory should be full of files. Compress them
-and mail them to renouveau.dumps (at) gmail.com or ask what to do at 
-irc.freenode.net, channel #nouveau.
+See the following page for usage instructions:
+http://nouveau.freedesktop.org/wiki/REnouveauDumps
 EOF
 
 %ifarch x86_64
