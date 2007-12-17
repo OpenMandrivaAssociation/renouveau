@@ -15,7 +15,6 @@ URL:		http://nouveau.freedesktop.org/
 # tar jcf renouveau-$(date +%Y%m%d).tar.bz2 renouveau-$(date +%Y%m%d)
 Source:		renouveau-%{cvsver}.tar.bz2
 License:	MIT
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	libxvmc-devel
 BuildRequires:	SDL-devel
 BuildRequires:	mesagl-devel
