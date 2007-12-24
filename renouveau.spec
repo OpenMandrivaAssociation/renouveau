@@ -1,6 +1,6 @@
 
 %define version	0
-%define cvsver	20071028
+%define cvsver	20071225
 %define rel	2
 %define name	renouveau
 
