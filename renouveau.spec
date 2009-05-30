@@ -1,26 +1,25 @@
-
 %define version	0
-%define cvsver	20090221
+%define cvsver	20090530
 %define rel	1
 %define name	renouveau
 
-Name:		%name
-Version:	%version
-Release:	%mkrel 0.%cvsver.%rel
 Summary:	A tool to help developers of nouveau
+Name:		%{name}
+Version:	%{version}
+Release:	%mkrel 0.%{cvsver}.%{rel}
+License:	MIT
 Group:		Development/X11
 URL:		http://nouveau.freedesktop.org/
 # CVS snapshot
 # cvs -z3 -d:pserver:anonymous@nouveau.cvs.sourceforge.net:/cvsroot/nouveau co -d renouveau-$(date +%Y%m%d) renouveau
 # tar jcf renouveau-$(date +%Y%m%d).tar.bz2 renouveau-$(date +%Y%m%d)
-Source:		renouveau-%{cvsver}.tar.bz2
-License:	MIT
-BuildRoot:	%{_tmppath}/%{name}-root
+Source0:	renouveau-%{cvsver}.tar.bz2
 BuildRequires:	libxvmc-devel
 BuildRequires:	SDL-devel
 BuildRequires:	mesagl-devel
 BuildRequires:	libxml2-devel
 ExclusiveArch:	%ix86 x86_64
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 REnouveau stands for Reverse Engineer nouveau. It is an application
@@ -73,5 +72,3 @@ rm -rf %{buildroot}
 %doc README README.install.urpmi license.txt
 %{_bindir}/renouveau
 %{_bindir}/disasm_shader
-
-
