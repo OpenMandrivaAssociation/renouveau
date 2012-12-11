@@ -1,0 +1,13 @@
+Index: renouveau-20121206/Makefile
+===================================================================
+--- renouveau-20121206.orig/Makefile
++++ renouveau-20121206/Makefile
+@@ -30,7 +30,7 @@ all: dep $(TARGET) disasm_shader parse_o
+ 	renouveau-replay
+ 
+ $(TARGET): $(patsubst %.c, %.o, $(SOURCES))
+-	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
++	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) -lm -lX11
+ 
+ #re2: $(patsubst %.c, %.o, $(R2_SOURCES))
+ #	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
