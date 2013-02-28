@@ -1,5 +1,5 @@
-%define cvsver	20121206
-%define rel	1
+%define cvsver 20121206
+%define rel	2
 
 Summary:	A tool to help developers of nouveau
 Name:		renouveau
