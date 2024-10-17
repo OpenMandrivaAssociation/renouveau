@@ -7,7 +7,7 @@ Version:	0
 Release:	0.%{cvsver}.%{rel}
 License:	MIT
 Group:		Development/X11
-URL:		http://nouveau.freedesktop.org/
+URL:		https://nouveau.freedesktop.org/
 # CVS snapshot
 # cvs -z3 -d:pserver:anonymous@nouveau.cvs.sourceforge.net:/cvsroot/nouveau co -d renouveau-$(date +%Y%m%d) renouveau
 # tar jcf renouveau-$(date +%Y%m%d).tar.bz2 renouveau-$(date +%Y%m%d)
