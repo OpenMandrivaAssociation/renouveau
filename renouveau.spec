@@ -13,6 +13,7 @@ URL:		https://nouveau.freedesktop.org/
 # tar jcf renouveau-$(date +%Y%m%d).tar.bz2 renouveau-$(date +%Y%m%d)
 Source0:	renouveau-%{cvsver}.tar.bz2
 Patch0:		renouveau-20121206-rosa-linkage.patch
+BuildRequires:	make
 BuildRequires:	libxvmc-devel
 BuildRequires:	SDL-devel
 BuildRequires:	pkgconfig(libxml-2.0)
